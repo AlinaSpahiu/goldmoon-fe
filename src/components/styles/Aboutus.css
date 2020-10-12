@@ -1,0 +1,65 @@
+
+
+  .h-animation{
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: initial;
+
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  .about-us{
+    margin-top:0;
+    padding: 10px;
+    padding-left: 110px;
+    background-color: #e0dad19d;
+    font-size: 30px;
+    color: #887760;
+  }
+
+
+  .our-rooms p{
+    margin-top:-50px;
+    color: #887760;
+    position: absolute;
+    padding-bottom:0;
+    padding-left: 30px;
+    font-size: 30px;
+    right: 0px;
+    width:300px;
+    height: 120px;
+    background-color:#e0dad19d;
+  }
+
+  .our-spa{
+    margin-top:0;
+    padding: 10px;
+    padding-left: 110px;
+    background-color: #e0dad19d;
+    font-size: 30px;
+    color: #887760;
+    width: 300px;
+  }
+
+  .p{
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .spa h1{
+    color: var(--primaryColor);
+    font-family: fantasy;
+ }
+ .row{
+   margin-right: 0px;
+ }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails } from '../actions/userActions'
+import "./styles/LoginPage.css"
 
 const MyProfilePage = ({location, history}) => {
     const [name, setName] = useState('')
@@ -44,13 +45,21 @@ const MyProfilePage = ({location, history}) => {
     }
   
     return (
-      <Row>
-          <Col md={3}> 
+      <Container className="container-w">
+      <Row className='body div-container'>
+        <Col md={5}>
+           <Card className="card ml-5" >
+             <Card.Img src="/images/alina.jpg" roundedCircle  />
+           </Card>
+        </Col>
+       
+          <Col md={7}> 
+          <div className="container-p">
           <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
         {loading && <Loader />}
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler}  className="w-50">
           <Form.Group controlId='name'>
             <Form.Label>Name</Form.Label>
             <Form.Control
@@ -95,11 +104,13 @@ const MyProfilePage = ({location, history}) => {
             Update
           </Button>
         </Form>
+        </div>
           </Col>
-          {/* ----------- */}
-          <Col md={9}>
-          </Col>
+        
+         
+        
       </Row>
+      </Container>
     )
   }
 

@@ -6,6 +6,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
 import { register } from '../actions/userActions'
+import "./styles/LoginPage.css"
 
 const RegisterPage = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -38,15 +39,18 @@ const RegisterPage = ({ location, history }) => {
   }
 
   return (
+    <div className="body">
+    <Row className='body'>
     <FormContainer>
       <h1>Sign Up</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
-      <Form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler}  className="w-75">
         <Form.Group controlId='name'>
           <Form.Label>Name</Form.Label>
           <Form.Control
+          
             type='name'
             placeholder='Enter name'
             value={name}
@@ -98,6 +102,8 @@ const RegisterPage = ({ location, history }) => {
         </Col>
       </Row>
     </FormContainer>
+    </Row>
+    </div>
   )
 }
 

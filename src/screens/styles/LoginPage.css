@@ -1,0 +1,44 @@
+.body{
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    height:90vh
+}
+
+.card{
+    border-radius: 100px;
+    border-color: #af9a7d;
+    border-width: 3px;
+    max-width: 350px;
+}
+.card-img{
+    border-radius: 100px;
+    border-color: #af9a7d;
+    border-width: 3px;
+    max-width: 350px;
+}
+
+.container-w{
+    background-color: whitesmoke;
+   
+}
+.container-p{
+ justify-content: center;
+ margin: auto
+}
+
+.form-control{
+    background: transparent;
+}
+
+.form-control:hover{
+    background: #e7e1d8;
+}
+
+.form-control:focus{
+    background: #9490897c; 
+}
+
+main{
+    background-color: whitesmoke;
+}

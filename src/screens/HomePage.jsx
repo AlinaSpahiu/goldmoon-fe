@@ -8,13 +8,14 @@ import Aboutus from '../components/Aboutus';
 import RoomsPageOnlyRooms from "../components/RoomsPageOnlyRooms"
 import {Container} from 'react-bootstrap'
 import SpaBanner from "../components/SpaBanner"
+import "../components/styles/Aboutus.css"
 
 const HomePage = () => {
     return (<>
         <div className="crsl">
             <Hero>
-            <Banner title="luxurious rooms" subtitle="deluxe rooms starting at $299">
-                <Link to="/rooms" className="btn-primary">
+            <Banner title="luxurious rooms" subtitle="deluxe rooms starting at €110">
+                <Link to="/rooms" className="btn-primary1">
                     Our rooms
                 </Link>
             </Banner>
@@ -25,11 +26,16 @@ const HomePage = () => {
           <Aboutus />
         </div>
 
-<div className="abtus-bck py-4" >
-<RoomsPageOnlyRooms />
-</div>
-
-<SpaBanner />
+     <div className="abtus-bck" >
+        <div className="our-rooms mb-5"><p> Our Rooms...</p></div>
+         <div className="mt-5"> <RoomsPageOnlyRooms /> </div> 
+     </div>
+      
+      <div>
+          <div> <div className="mb-5"><p className="our-spa"> Our Spa...</p></div> </div> 
+          <div> <SpaBanner /> </div>
+      </div>
+     
 <div className="abtus-bck py-4" > <Services /></div>
 
 </>

@@ -2,13 +2,13 @@ import {ROOM_LIST_REQUEST, ROOM_LIST_SUCCESS, ROOM_LIST_FAIL, ROOM_DETAILS_REQUE
 import axios from 'axios'
 
 // ~~~
-// Room List:
+// Room List:https://goldenmoon-be.herokupwebapp.com
 // ~~~
 export const listRooms = () => async(dispatch) =>{
     try{
         dispatch({type: ROOM_LIST_REQUEST})
 
-        const { data } = await axios.get('/api/rooms')
+        const { data } = await axios.get('https://goldenmoon-be.herokupwebapp.com/api/rooms')
 
         dispatch({ type: ROOM_LIST_SUCCESS, payload: data})
     }catch(error){
@@ -23,7 +23,7 @@ export const listRoomsDetails = (id) => async(dispatch) =>{
     try{
         dispatch({type: ROOM_DETAILS_REQUEST})
 
-        const { data } = await axios.get(`/api/rooms/${id}`)
+        const { data } = await axios.get(`https://goldenmoon-be.herokupwebapp.com/api/rooms/${id}`)
 
         dispatch({ type: ROOM_DETAILS_SUCCESS, payload: data})
     }catch(error){

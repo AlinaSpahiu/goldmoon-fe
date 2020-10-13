@@ -17,7 +17,7 @@ export const login = (email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.post(
-        '/api/users/login',
+        'https://goldenmoon-be.herokupwebapp.com/api/users/login',
         { email, password },
         config
       )
@@ -65,7 +65,7 @@ export const register = (name, email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      '/api/users/',
+      'https://goldenmoon-be.herokupwebapp.com/api/users/',
       { name, email, password },
       config
     )
@@ -112,7 +112,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      `/api/users/${id}`,
+      `https://goldenmoon-be.herokupwebapp.com/api/users/${id}`,
       config
     )
 

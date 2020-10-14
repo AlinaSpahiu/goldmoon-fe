@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -39,9 +39,10 @@ const RegisterPage = ({ location, history }) => {
   }
 
   return (
-    <div className="body">
+    <div className="login">
     <Row className='body'>
-    <FormContainer>
+      <Card className="card-login">
+    <div className="container-login">
       <h1>Sign Up</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
@@ -101,7 +102,8 @@ const RegisterPage = ({ location, history }) => {
           </Link>
         </Col>
       </Row>
-    </FormContainer>
+    </div>
+    </Card>
     </Row>
     </div>
   )

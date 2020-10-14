@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Row, Col, Container} from 'react-bootstrap';
 import Room from "../components/Room"
 import "../screens/styles/RoomsPage.css"
@@ -6,6 +6,7 @@ import {listRooms} from '../actions/roomActions'
 import {useDispatch, useSelector} from 'react-redux'
 import Message from "../components/Message"
 import Loader from "../components/Loader"
+
 
 const RoomsPage = () => {
   const dispatch = useDispatch()

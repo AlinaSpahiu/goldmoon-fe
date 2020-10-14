@@ -149,8 +149,8 @@ h6 {
   outline: none;
 }
 .nav-icon {
-  font-size: 1.5rem;
-  color: var(--primaryColor);
+  font-size: 3.5rem;
+  color: rgba(0, 0, 0, 0.856);
 }
 .nav-links {
   height: 230px;

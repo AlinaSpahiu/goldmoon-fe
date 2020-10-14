@@ -67,3 +67,8 @@
     letter-spacing: var(--mainSpacing);
   }
   /* end of room  */
+
+
+  .img-td{
+    max-width: 50px;;
+  }

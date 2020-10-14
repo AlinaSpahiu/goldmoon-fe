@@ -8,6 +8,7 @@ import Aboutus from '../components/Aboutus';
 import RoomsPageOnlyRooms from "../components/RoomsPageOnlyRooms"
 import {Container} from 'react-bootstrap'
 import SpaBanner from "../components/SpaBanner"
+import Map from '../components/Map'
 import "../components/styles/Aboutus.css"
 
 const HomePage = () => {
@@ -37,6 +38,8 @@ const HomePage = () => {
       </div>
      
 <div className="abtus-bck py-4" > <Services /></div>
+
+
 
 </>
     )

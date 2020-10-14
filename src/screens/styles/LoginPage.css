@@ -1,15 +1,33 @@
 .body{
-    background-color: whitesmoke;
     align-items: center;
     justify-content: center;
-    height:90vh
+    height:90vh;
+    opacity: 1;
+}
+.login{
+    background: whitesmoke;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-login{
+    border-radius: 4px!important;
+    min-width: 600px;
+    background-color: rgba(211, 210, 179, 0.137);
+    box-shadow: 20px 20px 30px -20px rgba(61, 60, 60, 0.603)!important;
+}
+
+.container-login{
+    margin: 50px !important;
+    margin-left:150px !important;
 }
 
 .card{
     border-radius: 100px;
-    border-color: #af9a7d;
-    border-width: 3px;
+    border-color: #0c0a087e;
+    border-width: 0px;
     max-width: 350px;
+ 
 }
 .card-img{
     border-radius: 100px;
@@ -19,7 +37,7 @@
 }
 
 .container-w{
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.472);
    
 }
 .container-p{
@@ -32,13 +50,17 @@
 }
 
 .form-control:hover{
-    background: #e7e1d8;
+    background: #adaaa5;
 }
 
 .form-control:focus{
-    background: #9490897c; 
+    background: #b4afa77c; 
 }
 
 main{
     background-color: whitesmoke;
+}
+
+.text-muted{
+    font-size: x-small !important;
 }

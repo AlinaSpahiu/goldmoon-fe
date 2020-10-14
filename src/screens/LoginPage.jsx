@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Form, Button, Row, Col, Container } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -31,9 +31,10 @@ const LoginPage = ({ location, history }) => {
   }
 
   return (
-    <div className="body">
+    <div className="login">
       <Row className='body'>
-    <FormContainer  className="w-75">
+        <Card className="card-login">
+    <div className="container-login">
       <h1>Sign In</h1>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
@@ -41,21 +42,27 @@ const LoginPage = ({ location, history }) => {
         <Form.Group controlId='email'>
           <Form.Label>Email Address</Form.Label>
           <Form.Control
+           className="w-75"
             type='email'
             placeholder='Enter email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
+              <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+               </Form.Text>
         </Form.Group>
 
         <Form.Group controlId='password'>
           <Form.Label>Password</Form.Label>
           <Form.Control
+           className="w-75"
             type='password'
             placeholder='Enter password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
+          <Form.Check type="checkbox" label="Remember me" />
         </Form.Group>
 
         <Button type='submit' variant='primary'>
@@ -71,7 +78,8 @@ const LoginPage = ({ location, history }) => {
           </Link>
         </Col>
       </Row>
-    </FormContainer>
+    </div>
+    </Card>
     </Row>
     </div>
   )

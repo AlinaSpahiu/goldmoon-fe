@@ -7,6 +7,7 @@ import "./styles/RoomsPage.css"
 import RoomsPageOnlyRooms from "../components/RoomsPageOnlyRooms"
 
 
+
 const RoomsPage = () => {
 
   
@@ -14,7 +15,7 @@ const RoomsPage = () => {
         <>
         <Hero hero="roomsHero">
           <Banner title="our rooms" >
-            <Link to="/" className="btn-primary">
+            <Link to="/" className="btn-primary1">
                 return home
             </Link>
           </Banner>

@@ -16,7 +16,7 @@ const Header = () => {
         dispatch(logout())
     }
 
-    return (
+    return (<>
         <header>
            <Navbar bg="#fa4355"  expand="lg" collapseOnSelect>
                <Container fluid> 
@@ -35,30 +35,47 @@ const Header = () => {
                       <LinkContainer to="/spa">
                           <Nav.Link>Spa</Nav.Link>
                       </LinkContainer>
-                      <LinkContainer to="/restaurant">
-                          <Nav.Link>Restaurant</Nav.Link>
-                      </LinkContainer>
+                    
                       {userInfo ? (
-                        <NavDropdown title={userInfo.name} id='username' >
-                            <LinkContainer to='/profile'>
-                                <NavDropdown.Item>
+                          <>
+                            <LinkContainer title={userInfo.name} id='username'  to='/profile'>
+                                <Nav.Link>
                                     Profile
-                                </NavDropdown.Item>
+                                </Nav.Link>
                             </LinkContainer>
-                                <NavDropdown.Item onClick={logoutHandler}>
-                                        Logout
-                                </NavDropdown.Item>
-                        </NavDropdown>
+
+                             <LinkContainer to="/rooms" onClick={logoutHandler}>
+                                <Nav.Link>Logout</Nav.Link>
+                             </LinkContainer>
+
+                            </>
+                                
+                          
+                    
                       )
                       : <LinkContainer to="/login">
                            <Nav.Link href="/login">Login<i className="fas fa-user ml-1"></i></Nav.Link>
                         </LinkContainer>  }
+
+                        {userInfo && userInfo.isAdmin && (
+                <NavDropdown title='Admin' id='adminmenu'>
+                  <LinkContainer to='/admin/userlist'>
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/admin/roomlist'>
+                    <NavDropdown.Item>Rooms</NavDropdown.Item>
+                  </LinkContainer>
+                 
+                </NavDropdown>
+              )}
+                   
                          
                     </Nav>
                   </Navbar.Collapse>
                </Container>
            </Navbar>
         </header>
+        </>
     )
 }
 export default Header

@@ -40,7 +40,7 @@ export const login = (email, password) => async (dispatch) => {
       }
   
       const { data } = await axios.post(
-        '/api/users/login',
+        'https://goldenmoon-be.herokuapp.com/api/users/login',
         { email, password },
         config
       )
@@ -89,7 +89,7 @@ export const register = (name, email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      '/api/users/',
+      'https://goldenmoon-be.herokuapp.com/api/users/',
       { name, email, password },
       config
     )
@@ -136,7 +136,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      `/api/users/${id}`,
+      `https://goldenmoon-be.herokuapp.com/api/users/${id}`,
       config
     )
 
@@ -175,7 +175,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/users/profile`, user, config)
+      `https://goldenmoon-be.herokuapp.com/api/users/profile`, user, config)
 
     dispatch({
       type: USER_UPDATE_PROFILE_SUCCESS,
@@ -211,7 +211,7 @@ export const listUsers = (user) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.get(
-      `/api/users`, config)
+      `https://goldenmoon-be.herokuapp.com/api/users`, config)
 
     dispatch({
       type: USER_LIST_SUCCESS,
@@ -247,7 +247,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
     }
 
       await axios.delete(
-      `/api/users/${id}`, config)
+      `https://goldenmoon-be.herokuapp.com/api/users/${id}`, config)
 
     dispatch({
       type: USER_DELETE_SUCCESS,

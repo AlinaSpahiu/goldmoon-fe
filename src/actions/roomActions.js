@@ -9,7 +9,7 @@ export const listRooms = () => async(dispatch) =>{
     try{
         dispatch({type: ROOM_LIST_REQUEST})
 
-        const { data } = await axios.get('/api/rooms')
+        const { data } = await axios.get('https://goldenmoon-be.herokuapp.com/api/rooms')
 
         dispatch({ type: ROOM_LIST_SUCCESS, payload: data})
     }catch(error){
@@ -24,7 +24,7 @@ export const listRoomsDetails = (id) => async(dispatch) =>{
     try{
         dispatch({type: ROOM_DETAILS_REQUEST})
 
-        const { data } = await axios.get(`/api/rooms/${id}`)
+        const { data } = await axios.get(`https://goldenmoon-be.herokuapp.com/api/rooms/${id}`)
 
         dispatch({ type: ROOM_DETAILS_SUCCESS, payload: data})
     }catch(error){
@@ -44,7 +44,7 @@ export const deleteRoom = (id) =>async(dispatch, getState) => {
 
     const config = { headers: { Authorization: `Bearer ${userInfo.token}`,}}
 
-   await axios.delete(`/api/rooms/${id}`, config)
+   await axios.delete(`https://goldenmoon-be.herokuapp.com/api/rooms/${id}`, config)
 
    dispatch({
        type: ROOM_DELETE_SUCCESS
@@ -74,7 +74,7 @@ export const createRoom = () =>async(dispatch, getState) => {
     const config = { headers: 
         { Authorization: `Bearer ${userInfo.token}`,},}
 
-   const{data} = await axios.post(`/api/rooms`,{}, config)
+   const{data} = await axios.post(`https://goldenmoon-be.herokuapp.com/api/rooms`,{}, config)
 
    dispatch({
        type: ROOM_CREATE_SUCCESS,
@@ -108,7 +108,7 @@ export const updateRoom = (room) =>async(dispatch, getState) => {
         {   'Content-Type': 'application/json',
             Authorization: `Bearer ${userInfo.token}`,},}
 
-   const{data} = await axios.put(`/api/rooms/${room._id}`,room, config)
+   const{data} = await axios.put(`https://goldenmoon-be.herokuapp.com/api/rooms/${room._id}`,room, config)
 
    dispatch({
        type: ROOM_UPDATE_SUCCESS,

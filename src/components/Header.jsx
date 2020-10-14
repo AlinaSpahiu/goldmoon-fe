@@ -39,11 +39,7 @@ const Header = () => {
                     
                       {userInfo ? (
                           <>
-                            <LinkContainer title={userInfo.name} id='username'  to='/profile'>
-                                <Nav.Link>
-                                    Profile
-                                </Nav.Link>
-                            </LinkContainer>
+                            
 
                              <LinkContainer to="/rooms" onClick={logoutHandler}>
                                 <Nav.Link>Logout</Nav.Link>

@@ -263,6 +263,10 @@ export const deleteUser = (id) => async (dispatch, getState) => {
     }
 }
 
+
+// ~~~
+// User Update Action
+// ~~~
 export const updateUser = (user) => async (dispatch, getState) => {
   try {
     dispatch({
